@@ -8,4 +8,5 @@ git commit -m "%cmnt%"
 git push origin main
 
 @echo off
+echo[
 pause

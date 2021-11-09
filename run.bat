@@ -2,7 +2,7 @@
 
 :start
 cls
-q C:\q\customScripts\namespaceQuiz\nsqz.q
+q C:\q\customScripts\namespaceQuiz\main.q
 echo:
 
 :question

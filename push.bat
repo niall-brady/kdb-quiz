@@ -1,5 +1,3 @@
-@echo on
-
 set /p cmnt="Enter a commit comment: "
 
 cd C:/q/customscripts/namespacequiz/
@@ -9,4 +7,5 @@ git status
 git commit -m "%cmnt%"
 git push origin main
 
+@echo off
 pause

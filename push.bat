@@ -1,7 +1,8 @@
+@echo off
 set /p cmnt="Enter a commit comment: "
-
 cd C:/q/customscripts/namespacequiz/
 
+@echo on
 git add .
 git status
 git commit -m "%cmnt%"

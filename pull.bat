@@ -1,4 +1,5 @@
 @echo off
+echo wow
 cd C:/q/customscripts/namespacequiz/
 
 @echo on

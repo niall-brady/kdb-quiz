@@ -26,7 +26,7 @@ if[inp~nssyms[0];
 	]
 \ .z Namespace
 if[inp~nssyms[1];
-	qs:("IP address";"input";"HTTP auth from cookie";"HTTP options";"dependencies";"port open";"msg validator";"HTTP post";"cores";"qcon";"TLS connection status";"set";"failed primitive";"validate user";"action on exit";"quiet mode";"argument to failed primitive";"self";"file";"timer";"host";"user ID";"PID";"value set";"version";"handles";"release date";"handle";"license";"websocket close";"local timespan";"websocket open";"UTC timespan";"websockets";"OS version";"raw command line";"local timestamp";"argv";"UTC timestamp";"local datetime";"port close";"UTC datetime";"peach handles";"zip defaults";"port get";"local date";"UTC date";"local time";"UTC time";"HTTP get");
+	qs:("IP address";"port input";"HTTP auth from cookie";"HTTP options";"dependencies";"port open";"msg validator";"HTTP post";"cores";"qcon";"TLS connection status";"set";"failed primitive";"validate user";"action on exit";"quiet mode";"argument to failed primitive";"self";"file";"timer";"host";"user ID";"PID";"value set";"version";"handles";"release date";"handle";"license";"websocket close";"local timespan";"websocket open";"UTC timespan";"websockets";"OS version";"raw command line";"local timestamp";"argv";"UTC timestamp";"local datetime";"port close";"UTC datetime";"peach handles";"zip defaults";"port get";"local date";"UTC date";"local time";"UTC time";"HTTP get");
 	ans:("a";"pi";"ac";"pm";"b";"po";"bm";"pp";"c";"pq";"e";"ps";"ex";"pw";"exit";"q";"ey";"s";"f";"ts";"h";"u";"i";"vs";"K";"W";"k";"w";"l";"wc";"N";"wo";"n";"ws";"o";"X";"P";"x";"p";"Z";"pc";"z";"pd";"zd";"pg";"D";"d";"T";"t";"ph");
 	chosen:1b;
 	prfx:".z."

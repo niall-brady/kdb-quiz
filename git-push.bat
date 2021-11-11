@@ -1,6 +1,6 @@
 @echo off
 set /p cmnt="Enter a commit comment: "
-cd C:/q/customscripts/namespacequiz/
+cd %~dp0
 
 @echo on
 git add .

@@ -1,5 +1,5 @@
 @echo off
-cd C:/q/customscripts/namespacequiz/
+cd %~dp0
 
 @echo on
 git pull origin main

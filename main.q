@@ -1,6 +1,8 @@
+\c 2000 2000
+\l src/printing.q
+
 exitkw:`quit`qqq;
 system"S ",string .z.i;
-\c 2000 2000
 
 \cd C:\q\customScripts\namespaceQuiz
 
@@ -9,7 +11,7 @@ nsplst:`.Q`.z`.u;
 
 $[`:leaderboard ~ key `:leaderboard;lbd:get `:leaderboard;lbd:([sym:nsplst]highscore:(count nsplst)#0)];
 
-show "Welcome to the quiz! type '",(string first exitkw),"' at any point to quit";
+print "Welcome to the quiz! type '",(string first exitkw),"' at any point to quit";
 / Choosing namespace
 optns:ssr[raze string nsplst;".";"|."],"|";
 1"Choose a namespace from this list ",optns,": ."; inp:first `$read0 0;
@@ -40,13 +42,13 @@ if [inp~nssyms[2];
 	]
 
 /// Functions ///
-qtn:{[qs;randnum]show "> What is the command for: ",`char$first qs[randnum],"?"}
-rans:{[score]show "CORRECT! Score is now: [",(string score+1),"]";:score+1} / Right Answer
+qtn:{[qs;randnum]print "> What is the command for: ",`char$first qs[randnum],"?"}
+rans:{[score]print "CORRECT! Score is now: [",(string score+1),"]";:score+1} / Right Answer
 / Wrong Answer
 wans:{[inp;ans;randnum;score;prfx;exitkw]
 	$[any inp=exitkw;
-		show "Quitting...";
-		show "WRONG! Correct answer was: ",prfx,`char$first ans[randnum]
+		print "Quitting...";
+		print "WRONG! Correct answer was: ",prfx,`char$first ans[randnum]
 		];
 	:0
 	}
@@ -54,21 +56,21 @@ wans:{[inp;ans;randnum;score;prfx;exitkw]
 /// Main loop ///
 if[chosen;
 	hscore:first exec highscore from lbd where sym=`$-1_prfx;
-	show 1 0#`;
+	nl[];
 	score:0;
 	while[all exitkw<>inp;
 		randnum:1?count qs;
 		qtn[qs;randnum];
 		1">> ",prfx;
 		inp: `$read0 0;
-		show 1 0#`;
+		nl[];
 		$[inp~`$first ans[randnum];
 			score: rans[score];
 			score: wans[inp;ans;randnum;score;prfx;exitkw]
 			];
 		hscore:max score,hscore;
-		if[all inp<>exitkw;show "Highscore: ",string hscore];
-		show 8 0#`;
+		if[all inp<>exitkw;print "Highscore: ",string hscore];
+		cls[];
 		
 		/ Updating lbd
 		`lbd upsert (sym:`$-1_prfx),highscore:hscore;

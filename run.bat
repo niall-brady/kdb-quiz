@@ -1,5 +1,7 @@
 @echo off
 
+title kdb+ Quiz
+
 :start
 cls
 q %~dp0/main.q

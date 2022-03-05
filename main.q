@@ -1,10 +1,9 @@
 \c 2000 2000
+\cd C:\q\customScripts\namespaceQuiz
 \l src/printing.q
 
 exitkw:`quit`qqq;
 system"S ",string .z.i;
-
-\cd C:\q\customScripts\namespaceQuiz
 
 / List of namespaces
 nsplst:`.Q`.z`.u;
